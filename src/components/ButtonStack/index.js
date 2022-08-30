@@ -14,8 +14,8 @@ class ButtonStack extends React.Component {
     render() {
         return (
             <Stack spacing={3} direction="row">
-                <CustomButton onClick={this.checkAll} label={'Check All'} color={'white'} backgroundColor={'#0777aa'} border={'2px'} variant={'contained'}/>
-                <CustomButton onClick={this.UnCheckAll} label={'Un-Check All'} color={'white'} backgroundColor={'#0777aa'} border={'2px'} variant={'contained'}/>
+                <CustomButton onClick={()=>{this.checkAll()}} label={'Check All'} color={'white'} backgroundColor={'#0777aa'} border={'2px'} variant={'contained'}/>
+                <CustomButton onClick={()=>{this.UnCheckAll()}} label={'Un-Check All'} color={'white'} backgroundColor={'#0777aa'} border={'2px'} variant={'contained'}/>
             </Stack>
         )
     }

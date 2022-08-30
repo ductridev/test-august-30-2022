@@ -77,7 +77,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <FormControl>
-          <FormHeader total={this.state.total.toFixed(2)} checkAll={() => { this.setState({ ecoChecked: true, extraChecked: true, travelCheck: true }) }} unCheckAll={() => { this.setState({ ecoChecked: false, extraChecked: false, travelCheck: false }) }} />
+          <FormHeader total={this.state.total.toFixed(2)} checkAll={() => { this.setState({ ecoChecked: true, extraChecked: true, travelChecked: true, total: parseFloat(this.state.ecoValue) + parseFloat(this.state.extraValue) + parseFloat(this.state.travelValue) }) }} unCheckAll={() => { this.setState({ ecoChecked: false, extraChecked: false, travelChecked: false, total: parseFloat(0) }) }} />
           <hr />
           <FormBody setEcoValue={(value) => { this.setEcoValue(value) }} setExtraValue={(value) => { this.setExtraValue(value) }} setTravelValue={(value) => { this.setTravelValue(value) }} ecoValue={this.state.ecoValue} extraValue={this.state.extraValue} ecoChecked={this.state.ecoChecked} extraChecked={this.state.extraChecked} travelChecked={this.state.travelChecked} ecoCheck={(_ecoChecked) => { this.ecoCheck(_ecoChecked) }} extraCheck={(_extraChecked) => { this.extraCheck(_extraChecked) }} travelCheck={(_travelChecked) => { this.travelCheck(_travelChecked) }} />
         </FormControl>

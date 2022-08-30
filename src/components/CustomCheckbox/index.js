@@ -38,7 +38,7 @@ class CustomCheckbox extends React.Component {
                     ?
                     <Grid container spacing={2}>
                         <Grid item xs={2}>
-                            <Checkbox onChange={(event) => { this.props.onChange(event.target.checked); }} />
+                            <Checkbox checked={this.props.checked} onChange={(event) => { this.props.onChange(event.target.checked); }} />
                         </Grid>
                         <Grid item xs={5}>
                             <Typography >{this.props.label}</Typography>
@@ -56,7 +56,7 @@ class CustomCheckbox extends React.Component {
                     ?
                     <Grid container spacing={2}>
                         <Grid item xs={2}>
-                            <Checkbox onChange={(event) => { this.props.onChange(event.target.checked) }} />
+                            <Checkbox checked={this.props.checked} onChange={(event) => { this.props.onChange(event.target.checked) }} />
                         </Grid>
                         <Grid item xs={5}>
                             <Typography >{this.props.label}</Typography>
